@@ -164,7 +164,40 @@
 
 .contactUs {
   grid-area: cntc;
-  background-color: #40b0ff; }
+  margin: 50px; }
+  .contactUs fieldset {
+    border: 0; }
+  .contactUs textarea {
+    width: 100%; }
+  .contactUs .content-head {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 2em 0 1em; }
+  .contactUs .is-center {
+    text-align: center; }
+  .contactUs .button-success {
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    background: #1cb841;
+    /* this is a green */ }
+  .contactUs .button-xlarge {
+    font-size: 125%; }
+  .contactUs button {
+    float: right; }
+  .contactUs #name,
+  .contactUs #email {
+    width: 50%; }
+  .contactUs aside {
+    background: #1f8dd6;
+    /* same color as selected state on site menu */
+    padding: 0.3em 1em;
+    border-radius: 3px;
+    color: #fff;
+    margin-bottom: 2em; }
+  .contactUs .contact-form {
+    margin-top: 20px; }
 
 .cred {
   grid-area: cred;

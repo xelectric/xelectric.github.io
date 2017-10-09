@@ -74,40 +74,30 @@
     </div>
     <div class="contactUs">
       <h2>Contact Us</h2>
-      <form method="POST" id="gform" action="https://script.google.com/macros/u/1/s/AKfycbx2DHjVQs6_u2P0AOY1NWqSqudkm669CPI-4xU8axy4fOVVrYc/exec">
-        <fieldset class="pure-group">
-          <label for="name">Name: </label>
-          <input id="name" name="name" placeholder="What your Mom calls you" />
-        </fieldset>
+      <div class="contact-form">
+        <form method="POST" id="gform" action="https://script.google.com/macros/s/AKfycbx2DHjVQs6_u2P0AOY1NWqSqudkm669CPI-4xU8axy4fOVVrYc/exec">
+          <fieldset class="pure-group">
+            <label for="name">Name: </label>
+            <input id="name" name="name" placeholder="What your Mom calls you" />
+          </fieldset>
 
-        <fieldset class="pure-group">
-          <label for="message">Message: </label>
-          <textarea id="message" name="message" rows="10" placeholder="Tell us what's on your mind..."></textarea>
-        </fieldset>
+          <fieldset class="pure-group">
+            <label for="message">Message: </label>
+            <textarea id="message" name="message" rows="10" placeholder="Tell us what's on your mind..."></textarea>
+          </fieldset>
 
-        <fieldset class="pure-group">
-          <label for="email">
-            <em>Your</em> Email Address:</label>
-          <input id="email" name="email" type="email" value="" required placeholder="your.name@email.com" />
-          <span id="email-invalid" style="display:none">
-            Must be a valid email address</span>
-        </fieldset>
+          <fieldset class="pure-group">
+            <label for="email">
+              <em>Your</em> Email Address:</label>
+            <input id="email" name="email" type="email" value="" required placeholder="your.name@email.com" />
+            <span id="email-invalid" style="display:none">
+              Must be a valid email address</span>
+          </fieldset>
 
-        <fieldset class="pure-group">
-          <label for="color">Favourite Color: </label>
-          <input id="color" name="color" placeholder="green" />
-        </fieldset>
-
-        <button class="button-success pure-button button-xlarge">
-          <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
-      </form>
-
-      <!-- Customise the Thankyou Message People See when they submit the form: -->
-      <div style="display:none;" id="thankyou_message">
-        <h2>
-          <em>Thanks</em> for contacting us! We will get back to you soon!</h2>
+          <button class="button-success pure-button button-xlarge">
+            <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+        </form>
       </div>
-      </form>
     </div>
     <div class="offer1">
       <div class="suboffer1">
@@ -147,7 +137,6 @@
       </div>
     </div>
   </div>
-  <script data-cfasync="false" type="text/javascript" src="gformhandler.js"></script>
   <script src="aos.js"></script>
   <script>
     AOS.init({
