@@ -1,0 +1,147 @@
+$break-large: 1072px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 750px 250px 1fr repeat(3, 500px) 50px;
+  grid-template-columns: 25px 1fr 25px;
+  margin: 0;
+  grid-template-areas: 
+    "hdr hdr hdr"
+    "ofr2 ofr2 ofr2"
+    ". ofr1 ."
+    "ofr3 ofr3 ofr3"
+    ". ofr4 ."
+    "cntc cntc cntc"
+    "cred cred cred";
+  @media screen and (max-width: $break-large) {
+    grid-template-rows: 750px 250px 2fr repeat(3,500px) 50px;
+    grid-template-areas: 
+      "hdr hdr hdr" 
+      "ofr2 ofr2 ofr2" 
+      "ofr1 ofr1 ofr1"
+      "ofr3 ofr3 ofr3"
+      "ofr4 ofr4 ofr4"
+      "cntc cntc cntc"
+      "cred cred cred";    
+  }
+  background-color: black;
+}
+
+.header {
+  background-color: #000000;
+  grid-area: hdr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .logo {
+    top: 10px;
+  }
+
+  img {
+    width: 400px;
+    height: 450px;
+    @media screen and (max-width: $break-large) {
+      width: 250px;
+      height: 300px;
+    }
+  }
+}
+
+.offer1 {
+  grid-area: ofr1;
+  background-color: #ff7ef4;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "so1 so2 so3";
+  @media screen and (max-width: $break-large) {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-areas: " so1 " " so2 " " so3 ";
+  }
+  display: grid;
+
+  .suboffer1 {
+    grid-area: so1;
+    background-color: #e40087;
+
+    .offer_logo {
+      margin: 50px auto;
+      width: 250px;
+      height: 250px; 
+    }
+
+    p {
+      margin: 50px;
+      color: white;
+      font-size: 1.4em;
+    }
+  }
+
+  .suboffer2 {
+    grid-area: so2;
+    background-color: #000000;
+
+    .offer_logo {
+      width: 250px;
+      height: 250px; 
+    }
+
+    p {
+      margin: 50px;
+      color: white;
+      font-size: 1.4em;
+    }
+  }
+  .suboffer3 {
+    grid-area: so3;
+    background-color: #e40087;
+
+    .offer_logo {
+      width: 250px;
+      height: 250px; 
+    }
+
+    p {
+      margin: 50px;
+      color: white;
+      font-size: 1.4em;
+    }
+  }
+}
+
+.offer2 {
+  grid-area: ofr2;
+  background-color: black;
+  display: flex;
+
+  .offerDesc {
+    margin: 50px;
+  }
+}
+
+.offer3 {
+  grid-area: ofr3;
+  background-color: #ff7ef4;
+}
+
+.offer4 {
+  grid-area: ofr4;
+  background-color: #e40087;
+}
+
+.contactUs {
+  grid-area: cntc;
+  background-color: #ff7ef4;
+}
+
+.cred {
+  grid-area: cred;
+  background-color: white;
+}
