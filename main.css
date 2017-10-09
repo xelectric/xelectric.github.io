@@ -57,7 +57,7 @@
   @media screen and (max-width: 1072px) {
     .container {
       grid-template-rows: 750px 250px 2fr repeat(3, 500px) 50px;
-      grid-template-areas: "hdr hdr hdr"  "ofr2 ofr2 ofr2"  "ofr1 ofr1 ofr1" "ofr3 ofr3 ofr3" "ofr4 ofr4 ofr4" "cntc cntc cntc" "cred cred cred"; } }
+      grid-template-areas: "hdr hdr hdr" "ofr2 ofr2 ofr2" "ofr1 ofr1 ofr1" "ofr3 ofr3 ofr3" "ofr4 ofr4 ofr4" "cntc cntc cntc" "cred cred cred"; } }
 
 .header {
   background-color: #000000;
@@ -89,10 +89,14 @@
       grid-template-areas: " so1 " " so2 " " so3 "; } }
   .offer1 .suboffer1 {
     grid-area: so1;
-    background-color: #e40087; }
+    background-color: #e40087;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
     .offer1 .suboffer1 .offer_logo {
-      margin: 50px auto;
-      width: 250px;
+      left: 50%;
+      font-size: 3em;
       height: 250px; }
     .offer1 .suboffer1 p {
       margin: 50px;
@@ -100,9 +104,14 @@
       font-size: 1.4em; }
   .offer1 .suboffer2 {
     grid-area: so2;
-    background-color: #000000; }
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
     .offer1 .suboffer2 .offer_logo {
-      width: 250px;
+      left: 50%;
+      font-size: 3em;
       height: 250px; }
     .offer1 .suboffer2 p {
       margin: 50px;
@@ -110,9 +119,14 @@
       font-size: 1.4em; }
   .offer1 .suboffer3 {
     grid-area: so3;
-    background-color: #e40087; }
+    background-color: #e40087;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
     .offer1 .suboffer3 .offer_logo {
-      width: 250px;
+      left: 50%;
+      font-size: 3em;
       height: 250px; }
     .offer1 .suboffer3 p {
       margin: 50px;

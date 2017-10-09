@@ -6,29 +6,42 @@ $break-large: 1072px;
   box-sizing: border-box;
 }
 
+@mixin suboffer-logo-mixin() {
+  .offer_logo {
+    left: 50%;
+    font-size: 3em;
+    height: 250px;
+  }
+}
+
+@mixin suboffer-container-mixin($grid-area, $background-color) {
+  grid-area: $grid-area;
+  background-color: $background-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin suboffer-paragraph-mixin() {
+  p {
+    margin: 50px;
+    color: white;
+    font-size: 1.4em;
+  }
+}
+
 .container {
   display: grid;
   grid-template-rows: 750px 250px 1fr repeat(3, 500px) 50px;
   grid-template-columns: 25px 1fr 25px;
   margin: 0;
-  grid-template-areas: 
-    "hdr hdr hdr"
-    "ofr2 ofr2 ofr2"
-    ". ofr1 ."
-    "ofr3 ofr3 ofr3"
-    ". ofr4 ."
-    "cntc cntc cntc"
-    "cred cred cred";
+  grid-template-areas: "hdr hdr hdr" "ofr2 ofr2 ofr2" ". ofr1 ."
+    "ofr3 ofr3 ofr3" ". ofr4 ." "cntc cntc cntc" "cred cred cred";
   @media screen and (max-width: $break-large) {
-    grid-template-rows: 750px 250px 2fr repeat(3,500px) 50px;
-    grid-template-areas: 
-      "hdr hdr hdr" 
-      "ofr2 ofr2 ofr2" 
-      "ofr1 ofr1 ofr1"
-      "ofr3 ofr3 ofr3"
-      "ofr4 ofr4 ofr4"
-      "cntc cntc cntc"
-      "cred cred cred";    
+    grid-template-rows: 750px 250px 2fr repeat(3, 500px) 50px;
+    grid-template-areas: "hdr hdr hdr" "ofr2 ofr2 ofr2" "ofr1 ofr1 ofr1"
+      "ofr3 ofr3 ofr3" "ofr4 ofr4 ofr4" "cntc cntc cntc" "cred cred cred";
   }
   background-color: black;
 }
@@ -68,51 +81,20 @@ $break-large: 1072px;
   display: grid;
 
   .suboffer1 {
-    grid-area: so1;
-    background-color: #e40087;
-
-    .offer_logo {
-      margin: 50px auto;
-      width: 250px;
-      height: 250px; 
-    }
-
-    p {
-      margin: 50px;
-      color: white;
-      font-size: 1.4em;
-    }
+    @include suboffer-container-mixin(so1, #e40087);
+    @include suboffer-logo-mixin();
+    @include suboffer-paragraph-mixin();
   }
 
   .suboffer2 {
-    grid-area: so2;
-    background-color: #000000;
-
-    .offer_logo {
-      width: 250px;
-      height: 250px; 
-    }
-
-    p {
-      margin: 50px;
-      color: white;
-      font-size: 1.4em;
-    }
+    @include suboffer-container-mixin(so2, #000000);
+    @include suboffer-logo-mixin();
+    @include suboffer-paragraph-mixin();
   }
   .suboffer3 {
-    grid-area: so3;
-    background-color: #e40087;
-
-    .offer_logo {
-      width: 250px;
-      height: 250px; 
-    }
-
-    p {
-      margin: 50px;
-      color: white;
-      font-size: 1.4em;
-    }
+    @include suboffer-container-mixin(so3, #e40087);
+    @include suboffer-logo-mixin();
+    @include suboffer-paragraph-mixin();
   }
 }
 
