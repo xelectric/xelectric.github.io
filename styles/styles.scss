@@ -1,4 +1,5 @@
 $break-large: 1072px;
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 
 * {
   margin: 0;
@@ -7,9 +8,16 @@ $break-large: 1072px;
 }
 
 @mixin suboffer-logo-mixin() {
+  margin: 50px;
+  display: flex;
+
+  .offer_heading {
+    flex: 1;
+  }
+
   .offer_logo {
     left: 50%;
-    font-size: 3em;
+    font-size: 1.5em;
     height: 250px;
   }
 }
@@ -26,51 +34,51 @@ $break-large: 1072px;
 @mixin suboffer-paragraph-mixin() {
   p {
     margin: 50px;
-    color: white;
-    font-size: 1.4em;
   }
 }
 
 .container {
   display: grid;
-  grid-template-rows: 750px 250px 1fr repeat(3, 500px) 50px;
-  grid-template-columns: 25px 1fr 25px;
+  font-size: 1.4em;
+  grid-template-rows: 750px 1fr 1fr 1fr;
+  grid-template-columns: 100px 1fr 100px;
   margin: 0;
-  grid-template-areas: "hdr hdr hdr" "ofr2 ofr2 ofr2" ". ofr1 ."
-    "ofr3 ofr3 ofr3" ". ofr4 ." "cntc cntc cntc" "cred cred cred";
+  grid-template-areas: "hdr hdr hdr" ". ofr1 ." "ofr3 ofr3 ofr3"
+    "cntc cntc cntc";
   @media screen and (max-width: $break-large) {
-    grid-template-rows: 750px 250px 2fr repeat(3, 500px) 50px;
-    grid-template-areas: "hdr hdr hdr" "ofr2 ofr2 ofr2" "ofr1 ofr1 ofr1"
-      "ofr3 ofr3 ofr3" "ofr4 ofr4 ofr4" "cntc cntc cntc" "cred cred cred";
+    grid-template-rows: 750px 1fr 1fr 1fr;
+    grid-template-areas: "hdr hdr hdr" "ofr1 ofr1 ofr1" "ofr3 ofr3 ofr3"
+      "cntc cntc cntc";
   }
-  background-color: black;
+  background-color: white;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .header {
-  background-color: #000000;
+  background-color: #282c34;
   grid-area: hdr;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-repeat: no-repeat;
 
   .logo {
-    top: 10px;
+    right: 10px;
   }
 
   img {
-    width: 400px;
-    height: 450px;
-    @media screen and (max-width: $break-large) {
-      width: 250px;
-      height: 300px;
-    }
+    // width: 400px;
+    // height: 450px;
+    // @media screen and (max-width: $break-large) {
+    //   width: 250px;
+    //   height: 300px;
+    // }
   }
 }
 
 .offer1 {
   grid-area: ofr1;
-  background-color: #ff7ef4;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: "so1 so2 so3";
   @media screen and (max-width: $break-large) {
@@ -81,18 +89,18 @@ $break-large: 1072px;
   display: grid;
 
   .suboffer1 {
-    @include suboffer-container-mixin(so1, #e40087);
+    @include suboffer-container-mixin(so1, white);
     @include suboffer-logo-mixin();
     @include suboffer-paragraph-mixin();
   }
 
   .suboffer2 {
-    @include suboffer-container-mixin(so2, #000000);
+    @include suboffer-container-mixin(so2, white);
     @include suboffer-logo-mixin();
     @include suboffer-paragraph-mixin();
   }
   .suboffer3 {
-    @include suboffer-container-mixin(so3, #e40087);
+    @include suboffer-container-mixin(so3, white);
     @include suboffer-logo-mixin();
     @include suboffer-paragraph-mixin();
   }
@@ -100,7 +108,7 @@ $break-large: 1072px;
 
 .offer2 {
   grid-area: ofr2;
-  background-color: black;
+  background-color: #40b0ff;
   display: flex;
 
   .offerDesc {
@@ -110,7 +118,27 @@ $break-large: 1072px;
 
 .offer3 {
   grid-area: ofr3;
-  background-color: #ff7ef4;
+
+  .offerContainer {
+    align-items: stretch;
+    display: flex;
+    margin: 50px;
+    flex-flow: row wrap;
+
+    .header-container {
+      flex: 1 100%;
+    }
+
+    .body-container {
+      padding: 50px;
+      flex: 2 33%;
+
+      .body-container-logo {
+        text-align: center;
+        padding-bottom: 50px;
+      }
+    }
+  }
 }
 
 .offer4 {
@@ -120,7 +148,7 @@ $break-large: 1072px;
 
 .contactUs {
   grid-area: cntc;
-  background-color: #ff7ef4;
+  background-color: #40b0ff;
 }
 
 .cred {
