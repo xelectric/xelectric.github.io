@@ -148,7 +148,8 @@ $break-large: 1072px;
 
 .contactUs {
   grid-area: cntc;
-  margin: 50px; 
+  margin: 50px;
+  height: 700px;
 
   fieldset {
     border: 0;
@@ -193,6 +194,10 @@ $break-large: 1072px;
 
   .contact-form {
     margin-top: 20px;
+  }
+
+  iframe {
+    overflow: hidden;
   }
 }
 

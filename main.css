@@ -164,7 +164,8 @@
 
 .contactUs {
   grid-area: cntc;
-  margin: 50px; }
+  margin: 50px;
+  height: 700px; }
   .contactUs fieldset {
     border: 0; }
   .contactUs textarea {
@@ -198,6 +199,8 @@
     margin-bottom: 2em; }
   .contactUs .contact-form {
     margin-top: 20px; }
+  .contactUs iframe {
+    overflow: hidden; }
 
 .cred {
   grid-area: cred;
