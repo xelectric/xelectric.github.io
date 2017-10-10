@@ -13,7 +13,7 @@ $break-large: 1072px;
   flex-direction: column;
 
   .offer_heading {
-    flex: 0.3;
+    flex: 0.1;
   }
 
   .offer_logo {
@@ -41,13 +41,12 @@ $break-large: 1072px;
 .container {
   display: grid;
   font-size: 1.4em;
-  grid-template-rows: 750px 1fr 1fr 1fr;
+  grid-template-rows: 750px 0.5fr 0.5fr 0.5fr;
   grid-template-columns: 100px 1fr 100px;
   margin: 0;
   grid-template-areas: "hdr hdr hdr" ". ofr1 ." "ofr3 ofr3 ofr3"
     "cntc cntc cntc";
   @media screen and (max-width: $break-large) {
-    grid-template-rows: 750px 1fr 1fr 1fr;
     grid-template-areas: "hdr hdr hdr" "ofr1 ofr1 ofr1" "ofr3 ofr3 ofr3"
       "cntc cntc cntc";
   }
