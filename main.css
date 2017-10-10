@@ -91,9 +91,10 @@
     justify-content: center;
     align-items: center;
     margin: 50px;
-    display: flex; }
+    display: flex;
+    flex-direction: column; }
     .offer1 .suboffer1 .offer_heading {
-      flex: 1; }
+      flex: 0.3; }
     .offer1 .suboffer1 .offer_logo {
       left: 50%;
       font-size: 1.5em;
@@ -108,9 +109,10 @@
     justify-content: center;
     align-items: center;
     margin: 50px;
-    display: flex; }
+    display: flex;
+    flex-direction: column; }
     .offer1 .suboffer2 .offer_heading {
-      flex: 1; }
+      flex: 0.3; }
     .offer1 .suboffer2 .offer_logo {
       left: 50%;
       font-size: 1.5em;
@@ -125,9 +127,10 @@
     justify-content: center;
     align-items: center;
     margin: 50px;
-    display: flex; }
+    display: flex;
+    flex-direction: column; }
     .offer1 .suboffer3 .offer_heading {
-      flex: 1; }
+      flex: 0.3; }
     .offer1 .suboffer3 .offer_logo {
       left: 50%;
       font-size: 1.5em;
@@ -177,12 +180,6 @@
     margin: 2em 0 1em; }
   .contactUs .is-center {
     text-align: center; }
-  .contactUs .button-success {
-    color: white;
-    border-radius: 4px;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    background: #1cb841;
-    /* this is a green */ }
   .contactUs .button-xlarge {
     font-size: 125%; }
   .contactUs button {
