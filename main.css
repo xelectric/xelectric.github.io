@@ -71,6 +71,10 @@
   background-repeat: no-repeat; }
   .header .logo {
     right: 10px; }
+    @media screen and (max-width: 1072px) {
+      .header .logo img {
+        height: 300px;
+        width: 400px; } }
 
 .offer1 {
   grid-area: ofr1;
