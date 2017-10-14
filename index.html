@@ -11,7 +11,7 @@
 
 
 <body>
-  <div class="nav-page" id="nav-page">
+  <!-- <div class="nav-page" id="nav-page">
     <div id="nav-content" class="centered nobullet">
       <ul class="largelist">
         <li>
@@ -28,10 +28,10 @@
         </li>
       </ul>
     </div>
-  </div>
-  <div class="hamburger" id="hamburger">
+  </div> -->
+  <!-- <div class="hamburger" id="hamburger">
     <i class="fa fa-bars fa-3x" aria-hidden="true"></i>
-  </div>
+  </div> -->
   <div class="container">
     <div class="header">
       <div class="logo" data-aos="zoom-in">
@@ -121,19 +121,19 @@
     AOS.init({
       duration: 1200,
     });
-    let hamburger = document.getElementById("hamburger").onclick =
-      () => {
-        document.getElementById("nav-page").classList.toggle("show-nav");
-        setTimeout(() => {
-          document.getElementById("nav-page").classList.toggle("show-visible-nav");
-        }, 100);
-      };
-    let goback = document.getElementById("goback").onclick = () => {
-      document.getElementById("nav-page").classList.toggle("show-visible-nav");
-      setTimeout(() => {
-        document.getElementById("nav-page").classList.toggle("show-nav");
-      }, 500);
-    }
+    // let hamburger = document.getElementById("hamburger").onclick =
+    //   () => {
+    //     document.getElementById("nav-page").classList.toggle("show-nav");
+    //     setTimeout(() => {
+    //       document.getElementById("nav-page").classList.toggle("show-visible-nav");
+    //     }, 100);
+    //   };
+    // let goback = document.getElementById("goback").onclick = () => {
+    //   document.getElementById("nav-page").classList.toggle("show-visible-nav");
+    //   setTimeout(() => {
+    //     document.getElementById("nav-page").classList.toggle("show-nav");
+    //   }, 500);
+    // }
   </script>
 </body>
 
