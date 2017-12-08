@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css?family=Amiko");
+.home {
+  font-family: "Amiko", sans-serif; }
+
+.hero {
+  background: -webkit-linear-gradient(141deg, #0f45b8 0%, #1fdbcb 51%, #2cb5e8 75%);
+  height: 300px;
+  display: grid;
+  justify-items: center;
+  align-content: center; }
+  @media (min-width: 768px) {
+    .hero {
+      height: 400px; } }
+  .hero .heroLogo {
+    width: 300px; }
+
+@media (min-width: 768px) {
+  .mobileNav {
+    display: none; } }
+
+.nav {
+  display: none;
+  position: sticky;
+  top: 5px;
+  background-color: rgba(32, 44, 204, 0.863);
+  box-shadow: 2px 4px 15px #535353; }
+  @media (min-width: 768px) {
+    .nav {
+      display: block; } }
+  .nav .navContainer {
+    margin: auto;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-content: center;
+    display: grid;
+    height: 50px; }
+    @media (min-width: 992px) {
+      .nav .navContainer {
+        width: 73%; } }
+
+.drawerButton {
+  position: fixed !important;
+  top: 5px;
+  right: 0; }
+
+.content {
+  text-align: center;
+  margin: auto;
+  display: grid;
+  justify-items: center;
+  align-content: stretch;
+  grid-template: "header1" "content1" "header2" "content2" "header3" "content3";
+  grid-template-columns: 1fr;
+  grid-gap: 15px; }
+  @media (min-width: 992px) {
+    .content {
+      padding: 20px;
+      grid-template: "header1 header2 header3" "content1 content2 content3"; } }
+  @media (min-width: 992px) {
+    .content {
+      width: 70%; } }
+  .content .header1 {
+    grid-area: header1; }
+  .content .header2 {
+    grid-area: header2; }
+  .content .header3 {
+    grid-area: header3; }
+  .content .content1 {
+    grid-area: content1; }
+  .content .content2 {
+    grid-area: content2; }
+  .content .content3 {
+    grid-area: content3; }
+  .content .contentBody {
+    width: 70%; }
