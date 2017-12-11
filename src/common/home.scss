@@ -1,8 +1,8 @@
 @import "_media_queries";
-@import url("https://fonts.googleapis.com/css?family=Amiko");
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
 
 .home {
-  font-family: "Amiko", sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 .hero {
@@ -12,14 +12,13 @@
     #1fdbcb 51%,
     #2cb5e8 75%
   );
-  // background: -o-linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
-  // background: -moz-linear-gradient(
-  //   141deg,
-  //   #0fb8ad 0%,
-  //   #1fc8db 51%,
-  //   #2cb5e8 75%
-  // );
-  // background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  background: -moz-linear-gradient(
+    141deg,
+    #0f45b8 0%,
+    #1fdbcb 51%,
+    #2cb5e8 75%
+  );
+  background: linear-gradient(141deg, #0f45b8 0%, #1fdbcb 51%, #2cb5e8 75%);
   height: 300px;
   @include md {
     height: 400px;
@@ -38,6 +37,11 @@
     display: none;
   }
 }
+
+.navList {
+  width: 250px;
+}
+
 .nav {
   display: none;
   @include md {
@@ -51,7 +55,7 @@
   .navContainer {
     margin: auto;
     @include lg {
-      width: 73%;
+      width: 70%;
     }
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
@@ -64,7 +68,8 @@
 .drawerButton {
   position: fixed !important;
   top: 5px;
-  right: 0;
+  right: 15%;
+  width: 20px;
 }
 
 .content {

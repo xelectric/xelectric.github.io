@@ -1,9 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Amiko");
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
 .home {
-  font-family: "Amiko", sans-serif; }
+  font-family: "Quicksand", sans-serif; }
 
 .hero {
   background: -webkit-linear-gradient(141deg, #0f45b8 0%, #1fdbcb 51%, #2cb5e8 75%);
+  background: -moz-linear-gradient(141deg, #0f45b8 0%, #1fdbcb 51%, #2cb5e8 75%);
+  background: linear-gradient(141deg, #0f45b8 0%, #1fdbcb 51%, #2cb5e8 75%);
   height: 300px;
   display: grid;
   justify-items: center;
@@ -17,6 +19,9 @@
 @media (min-width: 768px) {
   .mobileNav {
     display: none; } }
+
+.navList {
+  width: 250px; }
 
 .nav {
   display: none;
@@ -36,12 +41,13 @@
     height: 50px; }
     @media (min-width: 992px) {
       .nav .navContainer {
-        width: 73%; } }
+        width: 70%; } }
 
 .drawerButton {
   position: fixed !important;
   top: 5px;
-  right: 0; }
+  right: 15%;
+  width: 20px; }
 
 .content {
   text-align: center;
