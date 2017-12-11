@@ -25,7 +25,6 @@ const styles = theme => ({
 const style = {
   navButton: {
     backgroundColor: "rgba(237, 124, 49, 0.931)",
-    width: "10px"
   }, 
 };
 

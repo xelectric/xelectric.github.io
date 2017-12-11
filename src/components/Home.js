@@ -49,7 +49,7 @@ const Home = () => (
     </div>
 
     <Divider />
-    
+
     <div className="content">
       <div>
         <h1>How we do it</h1>
@@ -80,8 +80,6 @@ const Home = () => (
         our products and services at what we would consider fair and affordable.
         Our goal is to make these power systems accessible to all.
       </div>
-      <br />
-      <br />
     </div>
   </div>
 );
