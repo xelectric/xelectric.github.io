@@ -1,5 +1,65 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand");
-.home {
+.loading-blur {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  filter: opacity(0.95);
+  position: fixed; }
+
+.loading-circle {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 100; }
+
+.prompt-container {
+  font-family: "Quicksand", sans-serif;
+  background-color: white;
+  position: relative;
+  display: grid;
+  grid-template-columns: 50px auto 50px;
+  grid-template-rows: 100px auto auto;
+  grid-gap: 10px;
+  filter: drop-shadow(0 0 0.8rem rgba(150, 151, 151, 0.445));
+  width: 100%;
+  top: 0; }
+  @media (min-width: 768px) {
+    .prompt-container {
+      top: 50px; } }
+
+.prompt-heading {
+  grid-row-start: 1;
+  grid-column-start: 2;
+  text-align: center; }
+
+.prompt-form {
+  grid-column-start: 2;
+  display: grid; }
+  @media (min-width: 576px) {
+    .prompt-form {
+      grid-template-columns: auto; } }
+  @media (min-width: 768px) {
+    .prompt-form {
+      grid-template-rows: repeat(2, auto);
+      grid-template-columns: repeat(2, auto); } }
+
+.close-icon {
+  position: relative;
+  top: 30px;
+  text-align: center;
+  grid-row-start: 1;
+  grid-column-start: 3;
+  color: black;
+  font-weight: 900;
+  text-shadow: 0 0 .5px black;
+  transform: scale(1.5, 1.3); }
+
+.prompt-submit {
+  grid-row-start: 4;
+  grid-column-start: 2;
+  margin-bottom: 50px; }
+
+* {
   font-family: "Quicksand", sans-serif; }
 
 .hero {
@@ -26,6 +86,7 @@
 .nav {
   display: none;
   position: sticky;
+  z-index: -1;
   top: 5px;
   background-color: rgba(32, 44, 204, 0.863);
   box-shadow: 2px 4px 15px #535353; }
@@ -44,7 +105,8 @@
         width: 70%; } }
 
 .drawerButton {
-  position: fixed !important;
+  z-index: -1;
+  position: fixed;
   top: 5px;
   right: 15%;
   width: 20px; }

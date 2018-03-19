@@ -1,8 +1,10 @@
 @import "_media_queries";
 @import url("https://fonts.googleapis.com/css?family=Quicksand");
+@import "_prompt";
 
-.home {
+* {
   font-family: "Quicksand", sans-serif;
+  // font-size: 4.9vw;
 }
 
 .hero {
@@ -48,6 +50,7 @@
     display: block;
   }
   position: sticky;
+  z-index: -1;
   top: 5px;
   background-color: rgba(32, 44, 204, 0.863);
   box-shadow: 2px 4px 15px #535353;
@@ -66,7 +69,8 @@
 }
 
 .drawerButton {
-  position: fixed !important;
+  z-index: -1;
+  position: fixed;
   top: 5px;
   right: 15%;
   width: 20px;

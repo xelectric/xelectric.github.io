@@ -1,10 +1,6 @@
 import React from "react";
 import Button from "material-ui/Button";
 import { withStyles } from "material-ui/styles";
-import AppBar from "material-ui/AppBar";
-import Toolbar from "material-ui/Toolbar";
-import Typography from "material-ui/Typography";
-import IconButton from "material-ui/IconButton";
 import Divider from "material-ui/Divider";
 import List, { ListItem, ListItemText } from "material-ui/List";
 import Drawer from "material-ui/Drawer";
@@ -59,7 +55,7 @@ class MobileDrawerBase extends React.Component {
     return (
       <div>
         <div className={'drawerButton'}>
-          <Button onClick={this.toggleDrawer} className={classes.hamburger}>
+          <Button onClick={this.toggleDrawer}>
             <FontAwesome
               className="fa-bars"
               size="2x"
