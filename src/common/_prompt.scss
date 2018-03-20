@@ -4,6 +4,7 @@
     background-color: white;
     filter: opacity(.95);
     position: fixed;
+    z-index: 2;
 }
 
 .loading-circle { 
@@ -14,6 +15,7 @@
 }
 
 .prompt-container { 
+    z-index: 3;
     font-family: "Quicksand", sans-serif;
     background-color: white;
     position: relative;
@@ -21,7 +23,7 @@
     display: grid;
     grid-template-columns: 50px auto 50px;
     grid-template-rows: 100px auto auto;
-    grid-gap: 10px;
+    // grid-gap: 10px;
 
     filter: drop-shadow(0 0 0.80rem rgba(150, 151, 151, 0.445));
     width: 100%;
@@ -40,6 +42,7 @@
 
 .prompt-form { 
     grid-column-start: 2;
+    justify-items: center;
     display: grid;
     @include sm { 
         grid-template-columns: auto;

@@ -21,7 +21,7 @@ const styles = theme => ({
 const style = {
   navButton: {
     backgroundColor: "rgba(237, 124, 49, 0.931)",
-  }, 
+  },
 };
 
 class MobileDrawerBase extends React.Component {
@@ -36,7 +36,6 @@ class MobileDrawerBase extends React.Component {
   };
 
   render() {
-    const { classes } = this.props;
     const sideList = (
       <div>
         <List className="navList">
@@ -53,20 +52,21 @@ class MobileDrawerBase extends React.Component {
       </div>
     );
     return (
-      <div>
+      <React.Fragment>
         <div className={'drawerButton'}>
-          <Button onClick={this.toggleDrawer}>
-            <FontAwesome
-              className="fa-bars"
-              size="2x"
-              style={{
-                color: "#ED7D31",
-                textShadow: "0 1px 0 rgba(0, 0, 0, 0.1)"
-              }}
-            />
-          </Button>
+          <FontAwesome
+            onClick={this.toggleDrawer}
+            className="fa-bars"
+            size="2x"
+            style={{
+              color: "#ED7D31",
+              textShadow: "0 1px 0 rgba(0, 0, 0, 0.1)"
+            }}
+          />
         </div>
-        <Drawer open={this.state.open} onRequestClose={this.toggleDrawer}>
+        <Drawer open={this.state.open} 
+            onRequestClose={this.toggleDrawer}
+            onClose={this.toggleDrawer}>
           <div
             tabIndex={0}
             role="button"
@@ -76,7 +76,7 @@ class MobileDrawerBase extends React.Component {
             {sideList}
           </div>
         </Drawer>
-      </div>
+      </React.Fragment>
     );
   }
 }
@@ -85,21 +85,21 @@ const MobileDrawer = withStyles(styles)(MobileDrawerBase);
 
 const NavBar = () => (
   <div>
-    <div className="mobileNav">
-      <MobileDrawer />
-    </div>
     <div className="nav">
       <div className="navContainer">
-        <Button style={style.navButton} raised color={"contrast"}>
+        <Button style={style.navButton} color={"default"}>
           <b>Home</b>
         </Button>
-        <Button style={style.navButton} raised color={"contrast"}>
+        <Button style={style.navButton} color={"default"}>
           <b>Products And Services</b>
         </Button>
-        <Button style={style.navButton} raised color={"contrast"}>
+        <Button style={style.navButton} color={"default"}>
           <b>Contact Us</b>
         </Button>
       </div>
+    </div>
+    <div className="mobileNav">
+      <MobileDrawer />
     </div>
   </div>
 );

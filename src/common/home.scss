@@ -4,7 +4,6 @@
 
 * {
   font-family: "Quicksand", sans-serif;
-  // font-size: 4.9vw;
 }
 
 .hero {
@@ -50,7 +49,6 @@
     display: block;
   }
   position: sticky;
-  z-index: -1;
   top: 5px;
   background-color: rgba(32, 44, 204, 0.863);
   box-shadow: 2px 4px 15px #535353;
@@ -69,11 +67,10 @@
 }
 
 .drawerButton {
-  z-index: -1;
+  cursor: pointer;
   position: fixed;
-  top: 5px;
-  right: 15%;
-  width: 20px;
+  top: 10px;
+  left: 10px;
 }
 
 .content {

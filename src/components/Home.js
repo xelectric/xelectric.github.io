@@ -14,11 +14,11 @@ class Home extends React.Component {
     this.setState(({ showBanner }) => ({
       showBanner: !showBanner,
     }))
-    console.log('hi')
   }
 
   render() {
     return <div className="home">
+
       <Prompt showBanner={this.state.showBanner}
         toggleBanner={this.toggleBanner} />
       <div className="hero">
